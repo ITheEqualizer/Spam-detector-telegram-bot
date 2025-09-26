@@ -84,9 +84,9 @@ The code is modular, with error handling for Telegram API calls. It uses environ
    cd Spam-detector-telegram-bot
    ```
 
-2. **Install Dependencies** (create requirements.txt if needed):
+2. **Install Dependencies**:
    ```
-   pip install pandas scikit-learn joblib pyTelegramBotAPI
+   pip install -r requirements.txt
    ```
 
 3. **Prepare Data**: Provide 'data.csv' with 'message' and 'label' columns.
@@ -117,9 +117,9 @@ Add the bot to your group as an admin with delete permissions.
    cd Spam-detector-telegram-bot
    ```
 
-2. **نصب وابستگی‌ها** (در صورت نیاز requirements.txt ایجاد کنید):
+2. **نصب وابستگی‌ها**:
    ```
-   pip install pandas scikit-learn joblib pyTelegramBotAPI
+   pip install -r requirements.txt
    ```
 
 3. **آماده‌سازی داده**: 'data.csv' با ستون‌های 'message' و 'label' فراهم کنید.
