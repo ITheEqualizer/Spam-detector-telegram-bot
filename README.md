@@ -23,7 +23,7 @@ The project includes a training script to build the ML model from a CSV dataset 
 Based on code analysis:
 - `train.py`: Script to train the SVM model using 'data.csv' (columns: 'message', 'label'), saves 'model.pkl' and 'vectorizer.pkl'.
 - `bot.py`: Main bot script handling Telegram interactions, spam detection, commands, and callbacks.
-- `requirements.txt`: Should include needed packages.
+- `requirements.txt`: Includes needed packages.
 - `data.csv`: Input dataset for training (not included; user-provided).
 - `spam_messages.csv`: Generated file for collecting labeled messages.
 - `model.pkl` & `vectorizer.pkl`: Generated model files after training.
