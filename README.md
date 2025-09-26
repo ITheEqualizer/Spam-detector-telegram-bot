@@ -23,7 +23,7 @@ The project includes a training script to build the ML model from a CSV dataset 
 Based on code analysis:
 - `train.py`: Script to train the SVM model using 'data.csv' (columns: 'message', 'label'), saves 'model.pkl' and 'vectorizer.pkl'.
 - `bot.py`: Main bot script handling Telegram interactions, spam detection, commands, and callbacks.
-- `requirements.txt`: Should include `pandas`, `scikit-learn`, `joblib`, `pyTelegramBotAPI` (inferred from imports; create if needed).
+- `requirements.txt`: Should include needed packages.
 - `data.csv`: Input dataset for training (not included; user-provided).
 - `spam_messages.csv`: Generated file for collecting labeled messages.
 - `model.pkl` & `vectorizer.pkl`: Generated model files after training.
@@ -35,10 +35,10 @@ The code is modular, with error handling for Telegram API calls. It uses environ
 #### Prerequisites / الزامات
 - Python 3.8 or higher.
 - Telegram Bot Token (from @BotFather).
-- Dataset 'data.csv' for initial training (columns: 'message', 'label' where label is 'spam' or 'normal').
-- Set environment variable AUTH_TOKEN with your bot token.
-- Bot must be admin in target groups/channels with delete message permissions.
-- Placeholder IDs for LOGS_CHANNEL_ID and ADMINS_GROUP_ID (replace with actual -IDs).
+- Dataset 'data.csv' for initial training (columns: 'message', 'label', where label is 'spam' or 'normal').
+- Set the  environment variable AUTH_TOKEN with your bot token.
+- Bot must be an admin in target groups/channels with delete message permissions.
+- Placeholder IDs for LOGS_CHANNEL_ID and ADMINS_GROUP_ID (replace with actual IDs).
 
 ### فارسی
 **ربات تشخیص اسپم تلگرام** یک ربات تلگرام است که با استفاده از یادگیری ماشین پیام‌های اسپم را در چت‌ها تشخیص می‌دهد. از طبقه‌بند SVM آموزش‌دیده روی داده‌های متنی برای پیش‌بینی اسپم یا عادی (هم) بودن پیام‌ها استفاده می‌کند. ربات تمام پیام‌های ورودی را نظارت می‌کند، پیام‌های احتمالی اسپم با اطمینان >۴۰% را علامت‌گذاری می‌کند، به ادمین‌ها برای بررسی اطلاع می‌دهد و اجازه اقدامات مانند حذف یا تایید را می‌دهد. ادمین‌ها می‌توانند پیام‌ها را به صورت دستی برچسب‌گذاری کنند تا داده برای بازآموزش مدل جمع‌آوری شود.
@@ -58,7 +58,7 @@ The code is modular, with error handling for Telegram API calls. It uses environ
 بر اساس تحلیل کد:
 - `train.py`: اسکریپت آموزش مدل SVM با استفاده از 'data.csv' (ستون‌ها: 'message', 'label')، ذخیره 'model.pkl' و 'vectorizer.pkl'.
 - `bot.py`: اسکریپت اصلی ربات برای مدیریت تعاملات تلگرام، تشخیص اسپم، دستورات و callbackها.
-- `requirements.txt`: باید شامل `pandas`، `scikit-learn`، `joblib`، `pyTelegramBotAPI` باشد (از importها استنباط‌شده؛ در صورت نیاز ایجاد کنید).
+- `requirements.txt`: شامل چکیج های مورد نیاز.
 - `data.csv`: داده ورودی برای آموزش (شامل نیست؛ توسط کاربر فراهم شود).
 - `spam_messages.csv`: فایل تولیدشده برای جمع‌آوری پیام‌های برچسب‌گذاری‌شده.
 - `model.pkl` و `vectorizer.pkl`: فایل‌های مدل تولیدشده پس از آموزش.
@@ -108,7 +108,7 @@ The code is modular, with error handling for Telegram API calls. It uses environ
    python bot.py
    ```
 
-Add the bot to your group as admin with delete permissions.
+Add the bot to your group as an admin with delete permissions.
 
 ### فارسی
 1. **کلون کردن مخزن** (یا ایجاد فایل‌ها به صورت دستی):
@@ -146,7 +146,7 @@ Add the bot to your group as admin with delete permissions.
 ## Usage / استفاده
 
 ### English
-- **Add to Group**: Invite bot, make it admin with delete rights.
+- **Add to Group**: Invite the bot, make it an admin with delete rights.
 - **Commands** (admin-only):
   - `/detect`: Reply to message, choose spam/normal via buttons; saves to CSV.
   - `/send_data`: Sends 'spam_messages.csv' document.
@@ -182,4 +182,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-*Project analyzed on September 26, 2025. Code is functional, secure (env token), and Persian-focused. No vulnerabilities in deps.*
+*Project analyzed on September 26, 2025. The code is functional, secure (with an environment token), and Persian-focused. No vulnerabilities in deps.*
