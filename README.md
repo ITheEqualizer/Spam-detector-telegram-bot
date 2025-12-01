@@ -182,4 +182,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-*Project analyzed on September 26, 2025. The code is functional, secure (with an environment token), and Persian-focused. No vulnerabilities in deps.*
+*Project analyzed on September 26, 2025. The code is functional, secure (with an environment token), and Persian-focused. No vulnerabilities in deps found.*
